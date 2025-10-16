@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/dist/font-face.css');
 
 :root {
   --background: #ffffff;
@@ -27,8 +28,30 @@
   --font-mono: SFMono-Regular, Consolas, "Liberation Mono", monospace;
 }
 
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: "Vazirmatn", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+textarea, input[type="text"], input[type="search"] {
+  text-align: right;
+}
+
+.chatkit-message-bubble,
+.message-bubble {
+  justify-content: flex-end !important;
+}
+
+.chatkit-message,
+.chat-message,
+.message-bubble,
+.chatkit-message-bubble {
+  direction: rtl !important;
+  text-align: right !important;
 }
